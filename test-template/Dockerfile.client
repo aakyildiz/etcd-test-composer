@@ -53,6 +53,9 @@ COPY ./python-generate-traffic/parallel_driver_generate_traffic.py /opt/antithes
 # Copying additional resources into a resources folder
 COPY ./python-generate-traffic/resources/helper.py /opt/antithesis/resources/helper.py
 
+# Copying anytime CAS counter driver into Test Composer directory
+COPY ./python-anytime-cas-counter/anytime_driver_cas_counter.py /opt/antithesis/test/v1/main/anytime_driver_cas_counter.py
+RUN chmod +x /opt/antithesis/test/v1/main/anytime_driver_cas_counter.py
 
 # GO:
 
